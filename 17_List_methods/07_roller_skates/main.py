@@ -26,7 +26,3 @@ for i_customer in range(customer):
             count += 1
 
 print('\nНаибольшее кол-во людей, которые могут взять ролики: ', count)
-
-
-
-

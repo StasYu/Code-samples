@@ -8,6 +8,3 @@ for i_second in first_list:
 
 first_list.extend(second_list)
 print('Новый первый список с уникальными элементами: ', first_list)
-
-
-

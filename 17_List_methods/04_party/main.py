@@ -1,16 +1,15 @@
 guests = ['Петя', 'Ваня', 'Саша', 'Лиза', 'Катя']
 
 
-
-
 while True:
     print('Сейчас на вечеринке', len(guests), 'человек: ', guests)
     command = input('Гость пришел или ушел? ')
-    name = input('Имя гостя: ')
     if command == 'Пора спать':
         print('Вечеринка закончилась, все легли спать.')
         break
-    elif command == 'пришел':
+    name = input('Имя гостя: ')
+
+    if command == 'пришел':
         if len(guests) < 6:
             print('Привет', name)
             guests.append(name)
