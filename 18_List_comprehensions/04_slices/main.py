@@ -1,5 +1,4 @@
 alphabet = 'abcdefg'
-
 print(alphabet)
 print(alphabet[::-1])
 print(alphabet[::2])
