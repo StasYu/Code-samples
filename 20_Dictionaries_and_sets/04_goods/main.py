@@ -24,4 +24,18 @@ store = {
     ],
 }
 
-# TODO здесь писать код
+def amount(i_goods, store, goods):
+    amount = {i['price'] for i in store[goods[i_goods]]}
+    return (sum(amount))
+
+def price(i_goods, store, goods):
+    price = {i['price'] * i['quantity'] for i in store[goods[i_goods]]}
+    return (sum(price))
+
+
+for i_goods in goods:
+    print('{} - {} шт, стоимость {} руб'.format(
+        i_goods,
+        amount(i_goods, store, goods),
+        price(i_goods, store, goods)
+    ))
