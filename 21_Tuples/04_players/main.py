@@ -4,6 +4,4 @@ players = {
     ("Rob", "Bobbin"): (12, 8, 2)
 }
 
-
-updated_players = tuple([i_keys + i_val for i_keys, i_val in players.items()])
-print(updated_players)
+# TODO здесь писать код
