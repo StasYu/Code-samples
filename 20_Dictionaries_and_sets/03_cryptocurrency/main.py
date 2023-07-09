@@ -45,4 +45,15 @@ data = {
 }
 
 
-# TODO здесь писать код
+print('\nkeys = ', data.keys())
+print('\nvalues = ', data.values())
+data['ETH']['total_diff'] = 100
+# print(data['ETH'].values())
+data['tokens'][0]['fst_token_info'].update({'name':'doge'})
+# print(data['tokens'])
+temp = data['tokens'][0].pop('totalOut')
+data['ETH'].update({'totalOut': temp})
+# print('\ntokens = ', data['tokens'][0])
+# print('\ndata = ', data['ETH'])
+data['tokens'][1]['sec_token_info']['total_price'] = data['tokens'][1]['sec_token_info'].pop('price')
+print('\ntotal price = ', data['tokens'][1]['sec_token_info'])
