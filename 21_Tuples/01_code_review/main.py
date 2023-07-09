@@ -20,25 +20,27 @@ students = {
 }
 
 
-def f(dict):
-    lst = []
-    string = ''
-    for i in dict:
-        lst += (dict[i]['interests'])
-        string += dict[i]['surname']
-    cnt = 0
-    for s in string:
-        cnt += 1
-    return lst, cnt
+# def f(dict):
+#     lst = []
+#     string = ''
+#     for i in dict:
+#         lst += (dict[i]['interests'])
+#
+# # pairs = []
+# # for i in students:
+# #     pairs += (i, students[i]['age'])
+# #
+# #
+# # my_lst = f(students)[0]
+# # l = f(students)[1]
+# # print(my_lst, l)
+
+string = []
+surname_len = int()
+for i_count, i_items in students.items():
+    string.extend(i_items['interests'])
+    surname_len += len(i_items['surname'])
+
+print(string, surname_len)
 
 
-pairs = []
-for i in students:
-    pairs += (i, students[i]['age'])
-
-
-my_lst = f(students)[0]
-l = f(students)[1]
-print(my_lst, l)
-
-# TODO исправить код
