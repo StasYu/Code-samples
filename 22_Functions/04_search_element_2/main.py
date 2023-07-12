@@ -11,15 +11,28 @@ site = {
 	}
 }
 
-user_key = input('enter necessary key: ')
+user_key = input('enter necessary key: ').split()
+print(user_key)
+def find_key(site, key, depth, count=0):
+    count += 1
+    if depth is not None and count > int(depth):
+        return None
 
-def find_key(key,site):
-    if key in site.keys():
+    if key in site:
         return site[key]
-    if isinstance(site.keys(), dict):
-        find_key(key, site.keys())
+
+    for i_site in site.values():
+        if isinstance(i_site, dict):
+            result = find_key(i_site, key, depth, count)
+            if result:
+                break
     else:
-        print('key is not found')
+        result = None
 
+    return result
 
-print(find_key(user_key, site))
+if len(user_key) == 1:
+    res = find_key(site, user_key[0], depth=None)
+elif len(user_key) > 1:
+    res = find_key(site, user_key[0], depth=user_key[1])
+print(res)
