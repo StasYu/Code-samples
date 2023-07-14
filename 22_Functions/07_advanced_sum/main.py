@@ -11,7 +11,8 @@ def sum_def(*arghs, temp=[0]):
         if isinstance(i, int):
             temp[0] = temp[0] + i
         elif isinstance(i, list):
-            sum_def(*i)
+            for j in i:
+                sum_def(j)
 
     return(temp[0])
 
