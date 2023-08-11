@@ -13,7 +13,7 @@ def gen_files_path(root_path: str, listed: list[str]):
         if os.path.isfile(temp):
             yield temp
         if os.path.isdir(temp):
-            recursed = gen_files_path(temp, os.listdir(temp))
+            recursed = gen_files_path(root_path=temp, listed=os.listdir(temp))
             for i_num in recursed:
                 yield i_num
 
